@@ -1,0 +1,29 @@
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div{
+    margin: 10px;
+}
+
+#pattern-box{
+
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.pb-box{
+    width: auto;
+    border: 1px solid red;
+    padding : 10px;
+    background-color: rgb(201, 216, 211); 
+    
+}
+.pb-box pre{
+    line-height: 6px;
+    
+}

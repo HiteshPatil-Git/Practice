@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <div class="container">
+        This is Array Methods
+    </div>
+    <script>
+        const points = [40, 100, 1, 5, 25, 10];
+        // points.forEach(element => {
+        //     console.log(element);
+            
+        // });
+        // console.log("********");
+        // points.forEach(element => {
+        //     element += 10;
+        //     console.log(element);
+        // });
+
+        // console.log(points.map(element => element+10));
+
+        // let sum = points.reduce(((acc,cur)=> acc+cur),9); //Initial value
+        let sum = points.reduce(((acc,cur)=> acc+cur));
+        console.log(sum);
+
+        const points1 = [40, 100,[25,35], 1,[255,355,[2255,3355]], 5, 25, 10];
+        // console.log(points1.flat(1));
+        console.log(points1.flat(2));
+        // console.log(points1);
+        
+        console.log(points.filter(ele=> ele%2 === 0));
+        console.log(points.includes(100));
+        console.log(points.find(ele=> ele%2===0));
+        console.log(points.find(ele => ele%55 === 50));
+        // const findArr = points.find(ele => ele%55 === 50);
+        // console.log(findArr);
+        if(points.find(ele => ele%2 === 0) != undefined){
+            console.log("matched");
+        }else{
+            
+            console.log("Result undefined");
+        }
+
+        
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="https://code.jquery.com/jquery-1.12.3.min.js"
+    integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+  <!-- jQuery 3++ -->
+  <!-- <script src="js/jquery.js"></script>  -->
+
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+  <title>The Complete jQuery Course - Project Structure</title>
+</head>
+
+<body>
+
+  <div id="content2">
+    <div id="pokemonD">
+
+    </div>
+    <div id="pokemon"></div>
+  </div>
+  <div id="content">
+    <button id="btn-click">Click</button>
+    <button id="btn-hover">Hover</button>
+    <h1>The Complete jQuery Course - Project Structure</h1>
+
+    <!-- <div class="red-box">Red</div> -->
+    <div class="red-box">Red</div>
+    <div class="green-box">Green</div>
+    <!-- <div class="green-box" style="display: none;">Green - 2</div> -->
+    <!-- <div class="green-box" >Green - 2</div> -->
+    <div class="blue-box" title="Left & Right ArrowKey">Blue</div>
+    <div class="dummy">Dummy</div>
+    <div class="clear"></div>
+
+    <h2>Accessing File</h2>
+    <pre><code id="code">
+      <h2>Accessing File</h2>
+    </code></pre>
+    <div id="flicker">
+      <h2>Accessing Images from FlickerApi</h2>
+    </div>
+
+    <div class="gallery">
+      <h2>Image SlideShow - click on image or button</h2>
+      <img src="images/laptop-mobile_small.jpg" alt=""><br>
+      <!-- <img src="images/laptop-on-table_small.jpg" alt=""> -->
+    </div>
+    <div>
+      <button id="rev">Reverse</button>
+      <button style="margin-bottom: 10px;" id="fwd">Forward</button><br>
+    </div>
+    <div class="gallery2">
+      <img src="images/laptop-mobile_small.jpg" alt="">
+      <img src="images/laptop-on-table_small.jpg" alt="">
+      <img src="images/people-office-group-team_small.jpg" alt="">
+
+    </div>
+
+    <h2>Hi, I'm the Base Project!</h2>
+    <p>Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipisicing elit. Harum magnam, provident soluta beatae
+      dolore quis, omnis cumque alias maiores itaque ea neque sapiente quaerat accusamus et illum pariatur consequuntur
+      cum!</p>
+    <p>Lorem ipsum <a id="link" title="An amazing link" href="/url">dolor sit amet</a>, consectetur adipisicing elit. Ut
+      quibusdam ducimus a dolore atque maiores tempore minus pariatur, obcaecati fugit?</p>
+
+
+    <!-- <div class="lightbox">
+        <h2>Sign up</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum neque omnis saepe ad, a cum, ipsa dolore fugiat? Sit quaerat commodi voluptates. Eum neque quas sit iusto, voluptas cupiditate aperiam! Aspernatur veniam, fuga, commodi recusandae pariatur ratione. Pariatur sapiente, sint maxime. Rerum nihil aperiam ad aliquid ipsum illum eveniet voluptatum?</p>
+        <form action="">
+          <input type="email" placeholder="Your best email">
+          <input type="submit" value="Sign me up">
+        </form>
+      </div> -->
+
+    <ul id="list">
+      <li>Main item 1
+        <ul>
+          <li>Sub item 1</li>
+          <!-- <li class="emphasize">Sub item 1</li> -->
+          <li>Sub item 2</li>
+        </ul>
+      </li>
+      <li>Main item 2
+        <ul>
+          <li>Sub item 1</li>
+          <li>Sub item 2</li>
+
+        </ul>
+      </li>
+      <li>Main item 3
+        <ul>
+          <li>Sub item 1</li>
+          <li>Sub item 2</li>
+        </ul>
+      </li>
+      <li>Main item 4
+        <ul>
+          <li>Sub item 1</li>
+          <li>Sub item 2</li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- A form element without class or ID  -->
+    <form id="form" action="">
+
+      <input type="text" placeholder="text - name" id="name"><br>
+      <input type="checkbox" name="cb" id="cb" checked> <label for="cb">Check - 1</label> <br>
+      <!-- <input type="checkbox" name="cb2" id="cb2"> <label for="cb2">Check - 2</label> <br> -->
+      <input type="range" name="rng" id="rng" min="0" max="10" title="Initial" value="7"><br>
+      <input type="email" placeholder="email - email" id="email"><br>
+      <input type="password" placeholder="password - password" id="password"><br>
+      <input type="number" placeholder="number - number" id="number"><br>
+      <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+      <input type="radio" name="toc" value="read" id="read"> <label for="read">Read it all</label> <br>
+      <input type="radio" name="toc" value="tldr" checked>
+      <label for="tldr">TL;DR</label> <br>
+      <input type="date" name="date" id="date"><br>
+      <select name="" id="selection">
+        <option value="Opt - 2">Option - 2</option>
+        <option value="Opt - 1">Option - 1</option>
+        <option value="Opt - 3">Option - 3</option>
+        <option value="Opt - 4">Option - 4</option>
+        <option value="Opt - 4">Option - 4</option>
+      </select><br>
+      <input type="submit" value="Submit">
+    </form>
+
+
+    <h2>Form Validation</h2>
+    <form id="form2" action="">
+      <input id="name2" type="text" value="" placeholder="text - name">
+      <span id="name2-feedback"></span><br>
+
+      <input id="password2" type="password" value="" placeholder="password - password">
+      <span id="password2-feedback"></span><br>
+
+      <textarea id="message2" name="message" cols="30" rows="10"></textarea>
+      <span id="message2-feedback"></span><br>
+
+      <input id="checkbox2" type="checkbox" name="cb">
+      <label for="checkbox2">I accept</label>
+      <span id="checkbox2-feedback"></span><br>
+
+      <input type="submit" value="Submit">
+    </form>
+
+
+
+  </div>
+
+
+</body>
+
+</html>

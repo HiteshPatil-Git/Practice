@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+    <script src="../js/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="container">
+        <form id="form">
+            <label for="num">Number</label>
+            <input type="number" name="num" id="num" value="7">
+            <button id="btn" type="submit">Submit</button>
+        </form>
+
+        <div id="pattern-box">
+
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+
+            var form = $("#form");
+
+
+            var pb1 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb2 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb3 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb4 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb5 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb6 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb7 = $("<div class='pb-box'>").appendTo("#pattern-box");
+            var pb8 = $("<div class='pb-box'>").appendTo("#pattern-box");
+
+
+            form.submit(function (event) {
+
+                var num = $("#num").val();
+
+                //1st
+                pb1.empty();
+                pb1.append("<h4>Triangle</h4>");
+
+                for (let i = 1; i <= num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+                    for (let j = 1; j <= i; j++) {
+                        // console.log("j : " + j);
+                        str += '*';
+
+                    }
+                    var pattern = $("<span>").html(str);
+                    pattern.appendTo(pb1);
+
+
+                    $(pb1).append("<br>");
+                }
+
+
+                //2nd 
+                pb2.empty();
+                pb2.append("<h4>Triangle</h4>");
+
+                for (let i = num; i >= 1; i--) {
+                    // console.log("i : " + i);
+                    for (let j = 1; j <= i; j++) {
+                        // console.log("j : " + j);
+                        var pattern = $("<span>").html("*");
+                        pattern.appendTo(pb2);
+                    }
+                    $(pb2).append("<br>");
+                }
+
+                // //2nd 
+                // pb1.empty();
+
+                // for (let i = num; i >= 1; i--) {
+                //     // console.log("i : " + i);
+                //     var str = '';
+
+                //     for (let j = 1; j <= i ; j++) {
+                //         // console.log("j : " + j);
+                //         str += "*";
+                //     }
+                //     $(pb1).append("<span>"+str+"</span><br>");
+                // }
+
+
+
+                //3rd Triangle
+                pb3.empty();
+                pb3.append("<h4>Triangle</h4>");
+                for (let i = 0; i < num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j <= num; j++) {
+                        // console.log("j : " + j);
+                        if (j < num - i) {
+                            str += "&nbsp";
+
+                        } else {
+                            str += "*";
+                        }
+                    }
+
+                    var pattern = $("<span>").html(str);
+                    pattern.appendTo(pb3);
+                    $(pb3).append("<br>");
+
+                    // $(pb1).append("<pre>"+str+"</pre>");
+                }
+
+
+                //4thrd Triangle
+                pb4.empty();
+                pb4.append("<h4>Triangle</h4>");
+                for (let i = 0; i < num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j <= num; j++) {
+                        // console.log("j : " + j);
+                        if (j < num - i) {
+                            str += " ";
+
+                        } else {
+                            str += "*";
+                        }
+                    }
+
+                    // var pattern = $("<span>").html(str);
+                    // pattern.appendTo(pb3);
+                    // $(pb3).append("<br>");
+
+                    $(pb4).append("<pre>" + str + "</pre>");
+                }
+                //5th Triangle
+                pb5.empty();
+                pb5.append("<h4>Triangle</h4>");
+                for (let i = 0; i < num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j <= num; j++) {
+                        // console.log("j : " + j);
+                        if (j <= i) {
+                            str += " ";
+
+                        } else {
+                            str += "*";
+                        }
+                    }
+
+                    // var pattern = $("<span>").html(str);
+                    // pattern.appendTo(pb3);
+                    // $(pb3).append("<br>");
+
+                    $(pb5).append("<pre>" + str + "</pre>");
+                }
+
+
+
+
+
+
+
+                //6th - Pyramid
+                pb6.empty();
+                pb6.append("<h4>Pyramid</h4>");
+
+                for (let i = 0; i < num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j <= num; j++) {
+                        // console.log("j : " + j);
+
+                        if (j < num - i) {
+                            str += " ";
+
+                        } else {
+                            str += "*";
+                        }
+                    }
+                    // // for RHS *
+                    for (let k = 1; k < (i + 1); k++) {
+                        str += "*";
+                    }
+
+
+                    $(pb6).append("<pre>" + str + "<pre>");
+                }
+
+
+
+                //7th - Pyramid
+                pb7.empty();
+                pb7.append("<h4>Pyramid</h4>");
+
+
+                for (let i = 0; i < num; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j <= num; j++) {
+                        // console.log("j : " + j);
+                        if (j > i) {
+                            str += "*";
+                        } else {
+                            str += " ";
+                        }
+
+                    }
+                    // // for RHS *
+                    for (let k = num; k > (i + 1); k--) {
+                        str += "*";
+                    }
+
+                    $(pb7).append("<pre>" + str + "<pre>");
+                }
+
+
+
+                //8th - Diamond
+                pb8.empty();
+                pb8.append("<h4>Diamond</h4>");
+                var half = Math.round(num / 2);
+                console.log(">>>>>>>" + half);
+
+                // for (let i = 1; i < num; i++) {
+                //     // console.log("i : " + i);
+                //     var str = '';
+                //     for (let j = 1; j <= num; j++) {
+                //         if (j > num - i) {
+                //             for (let k = 1; k <= ((2*i)-1); k++) {
+                //                 str += '*';
+                //             }
+                //             break;                            
+                //         } else {
+                //             str += ' ';
+                //         }
+
+                //     }
+
+
+                for (let i = 1; i <= half; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 0; j <= half; j++) {                        
+                        if (j >= half - i) {
+                            for (let k = 1; k <= ((2 * i) - 1); k++) {
+                                str += '*';
+                            }
+                            break;
+                        } else {
+                            str += ' ';
+                        }
+                    }
+
+                    $(pb8).append("<pre>" + str + "<pre>");
+                }
+
+                for (let i = 1; i < half; i++) {
+                    // console.log("i : " + i);
+                    var str = '';
+
+                    for (let j = 1; j < half; j++) {
+                        // console.log("j : " + j);
+                        if (j > i) {
+                            str += "*";
+                        } else {
+                            str += " ";
+                        }
+                    }
+                    // for RHS *
+                    for (let k = half; k >= (i + 1); k--) {
+                        str += "*";
+                    }
+
+                    $(pb8).append("<pre>" + str + "<pre>");
+                }
+
+
+
+
+
+
+
+
+                // //8th - Diamond
+                // pb8.empty();
+                // pb8.append("<h4>Diamond</h4>");
+                // var half = num / 2;
+                // for (let i = 0; i < num; i++) {
+                //     // console.log("i : " + i);
+                //     var str = '';
+
+                //     for (let j = 1; j <= num; j++) {
+                //         console.log("If j : " + j + " If i : " + i);
+                //         if (j < num - i) {
+                //             str += " ";
+
+                //         } else {
+                //             str += "*";
+                //         }
+                //     }
+
+                //     // for RHS *
+                //     for (let k = 1; k < (i + 1); k++) {
+                //         str += "*";
+                //     }
+
+                //     $(pb8).append("<pre>" + str + "<pre>");
+
+                //     }
+
+
+                //     for (let i = 0; i < num; i++) {
+                //     // console.log("i : " + i);
+                //     var str = '';
+
+                //     for (let j = 1; j <= num; j++) {
+                //         console.log("If j : " + j + " If i : " + i);
+                //         if (j < num - i) {
+                //             str += " ";
+
+                //         } else {
+                //             str += "*";
+                //         }
+                //     }
+
+                //     // for RHS *
+                //     for (let k = 1; k < (i + 1); k++) {
+                //         str += "*";
+                //     }
+
+                //     $(pb8).append("<pre>" + str + "<pre>");
+
+                //     }
+
+
+                event.preventDefault();
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

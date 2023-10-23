@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/jquery.js"></script>
+    <!-- CDN -->
+    <!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <h1>jQuery</h1>
+    <form class="container">
+    <!-- <form id="form" class="container"> -->
+        <label class="form-spacing" for="">Name</label>
+        <input value="abcd" class="form-spacing" type="text" name="name" id="name">
+        <input type="submit" value="submit">
+    </form>
+    <div class="container">
+        <!-- <div id="test1"> -->
+        <div id="box" class="box">
+            <h1>Test-1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga, a, quas illum atque omnis qui
+                laboriosam labore cumque id dolore possimus delectus unde eum quaerat, odio quae deleniti quam nulla
+                eaque? Illum, recusandae.</p>
+        </div>
+        <!-- <div id="test2">
+            <h1>Test-2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut fuga, a, quas illum atque omnis qui
+                laboriosam labore cumque id dolore possimus delectus unde eum quaerat, odio quae deleniti quam nulla
+                eaque? Illum, recusandae.</p>
+        </div> -->
+    </div>
+
+
+    <!-- <ul id="list">
+        <li>list-1</li>
+        <li>list-2</li>
+        <li>list-3</li>
+        <li>list-4</li>
+        <li>list-5</li>
+    </ul> -->
+    <img src="" alt="">
+    <script>
+        // $('document').ready(() => alert("jQuery included"));
+        // $(document).ready(function () {alert("jQuery included");} );
+        $(document).ready(function () {
+
+            // var a = $('#box').html();
+            var a = $('#box').text();
+            // var a = $('#box').attr('class');
+            console.log(a);
+            // $('form').submit(function () {
+                
+            //     var b = $('#name').val();
+            //     alert("Hello"+ b);
+            //     console.log(b);
+            // });
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, alias enim. Minus sequi ea rem,
+            quasi consectetur dolor perspiciatis quis modi, aliquid commodi voluptatum ipsa quisquam dolores ipsum
+            necessitatibus placeat non autem! Voluptate, hic doloribus! Totam odio blanditiis reiciendis minus?</p>
+        <button id="btn" onclick="toggleHide()">Button1</button>
+    </div>
+
+    <button id="myBtn">Try it</button>
+
+    <p id="demo"></p>
+    <p id="preT"></p>
+    <p id="curT"></p>
+
+    <script>
+        // let para = document.getElementById('para');
+        // para.addEventListener("mouseenter", function run() {
+        //     console.log("Mouse Enter");
+        // })
+        // para.addEventListener("mouseleave", function run() {
+        //     console.log("Mouse Away");
+        // })
+        // function toggleHide() {
+        //     // let btn = document.getElementById('btn');
+        //     if (para.style.display != 'none') {
+        //         para.style.display = 'none';
+        //     } else {
+        //         para.style.display = 'block';
+        //     }
+        // }
+
+        // let preT = document.getElementById('preT');
+        // let curT = document.getElementById('curT');
+        // let myBtn = document.getElementById('myBtn');
+
+        // myBtn.addEventListener("click", function () {
+        //     pD = 0;
+        //     cD = new Date();
+        //     if(pD == 0){
+        //         pD = new Date();
+        //     }
+        //     myFunction(pD, cD);
+        //     pD = cD;
+        // });
+
+        // function myFunction(pD, cD) {
+        //     text = "<h3> Prev. Time is ";
+        //     text2 = "<h3> Current. Time is ";
+        //     preT.innerHTML = text += pD + '</h3>';
+        //     curT.innerHTML = text2 += cD + '</h3>';
+        // }
+
+        // setInterval(() => {
+        //     console.log('hi');
+        // }, 2000);
+
+        // let dt = new Date(2023, 9, 22);
+        // // let dt = new Date();
+        // console.log(dt);
+        // console.log("Year is-" ,dt.getFullYear());
+        // console.log("Date is-" ,dt.getDate());
+        // console.log("Month is-" ,dt.getMonth());
+        // console.log("Hr is-" ,dt.getHours());
+        // console.log("Minu is-" ,dt.getMinutes());
+        // console.log("Sec is-" ,dt.getSeconds());
+        // console.log("milliSec is-" ,dt.getMilliseconds());
+        // console.log(dt.getDay());
+
+        // setInterval(() => {
+        //     console.log("From Set Interval Out")
+        // }, 3000);
+
+        // setTimeout(() => {
+        //     console.log("From Set Time Out")
+
+        // }, 5000);
+
+        // let num = (a,b=2) => a*b;
+        // console.log(num(5,3));
+        // console.log(num(5));
+        // console.log(num(2));
+
+
+        let obj1 = {
+            greeting: "Good Morning",
+            names: ["Harry", "Rohan", "SkillF", "DjKhiladi"],
+            speak() {
+                this.names.forEach((student) => {
+                    let greeting = "Inner";
+                    console.log(this.greeting + " Kukdoo Koo " + student);
+                });
+            }
+        }
+        obj1.speak();
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>
