@@ -1,0 +1,139 @@
+﻿<table id="myTable">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Data will be displayed here -->
+    </tbody>
+</table>
+
+
+**************
+
+function addRow() {
+    // Get input data
+    var id = document.getElementById('idInput').value;
+    var name = document.getElementById('nameInput').value;
+    var email = document.getElementById('emailInput').value;
+    
+    // Create a new row
+    var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+    var newRow = table.insertRow(table.rows.length);
+    
+    // Insert data into the row
+    var cell1 = newRow.insertCell(0);
+    var cell2 = newRow.insertCell(1);
+    var cell3 = newRow.insertCell(2);
+    var cell4 = newRow.insertCell(3);
+    
+    cell1.innerHTML = id;
+    cell2.innerHTML = name;
+    cell3.innerHTML = email;
+    cell4.innerHTML = '<button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button>';
+}
+
+
+****************
+
+
+// Example data source
+var data = [
+    { id: 1, name: 'John', email: 'john@example.com' },
+    { id: 2, name: 'Jane', email: 'jane@example.com' }
+];
+
+function populateTable() {
+    var table = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+    for (var i = 0; i < data.length; i++) {
+        var row = table.insertRow(table.rows.length);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        cell1.innerHTML = data[i].id;
+        cell2.innerHTML = data[i].name;
+        cell3.innerHTML = data[i].email;
+        cell4.innerHTML = '<button onclick="editRow(this)">Edit</button> <button onclick="deleteRow(this)">Delete</button>';
+    }
+}
+
+
+
+***************
+
+
+
+
+function editRow(button) {
+    var row = button.parentNode.parentNode;
+    // Implement logic to edit the row and update the data source
+}
+
+
+function deleteRow(button) {
+    var row = button.parentNode.parentNode;
+    // Implement logic to delete the row and update the data source
+    row.remove();
+}
+
+
+
+*****************
+
+
+<form id="addForm">
+    <input type="text" id="idInput" placeholder="ID">
+    <input type="text" id="nameInput" placeholder="Name">
+    <input type="text" id="emailInput" placeholder="Email">
+    <button type="button" onclick="addRow()">Add Record</button>
+</form>
+
+
+******************
+
+
+<form id="editForm">
+    <input type="text" id="editIdInput" placeholder="ID">
+    <input type="text" id="editNameInput" placeholder="Name">
+    <input type="text" id="editEmailInput" placeholder="Email">
+    <button type="button" onclick="updateRow()">Update Record</button>
+</form>
+
+
+
+****************
+function populateEditForm(row) {
+    // Extract data from the selected row and populate the edit form fields
+    var cells = row.cells;
+    document.getElementById('editIdInput').value = cells[0].innerHTML;
+    document.getElementById('editNameInput').value = cells[1].innerHTML;
+    document.getElementById('editEmailInput').value = cells[2].innerHTML;
+}
+
+
+
+*******************
+
+
+function updateRow() {
+    // Get input data from the edit form
+    var id = document.getElementById('editIdInput').value;
+    var name = document.getElementById('editNameInput').value;
+    var email = document.getElementById('editEmailInput').value;
+
+    // Update the selected row in the table and data source
+    // (as shown in the previous response)
+}
+
+
+
+
+
+
+
+
