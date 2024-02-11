@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Practice\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj": {}
+    "D:\\GitRepo\\Practice\\ASP.NET Core\\Udemy\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj": {}
   },
   "projects": {
-    "D:\\Practice\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj": {
+    "D:\\GitRepo\\Practice\\ASP.NET Core\\Udemy\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Practice\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj",
+        "projectUniqueName": "D:\\GitRepo\\Practice\\ASP.NET Core\\Udemy\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj",
         "projectName": "StudentManagementPortal",
-        "projectPath": "D:\\Practice\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj",
+        "projectPath": "D:\\GitRepo\\Practice\\ASP.NET Core\\Udemy\\StudentManagementPortal\\StudentManagementPortal\\StudentManagementPortal.csproj",
         "packagesPath": "C:\\Users\\HITESH\\.nuget\\packages\\",
-        "outputPath": "D:\\Practice\\StudentManagementPortal\\StudentManagementPortal\\obj\\",
+        "outputPath": "D:\\GitRepo\\Practice\\ASP.NET Core\\Udemy\\StudentManagementPortal\\StudentManagementPortal\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,9 +45,55 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "EntityFrameworkCore.Exceptions.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[7.3.0, )"
+            },
+            "itext7": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "itext7.bouncy-castle-adapter": {
+              "target": "Package",
+              "version": "[8.0.3, )"
             }
           },
           "imports": [
